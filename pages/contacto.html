@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto – Flora Cosmica</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <main id="main-content">
+    <div class="container py-5">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb-flora" aria-label="Miga de pan">
+        <a href="../index.html">Inicio</a>
+        <span aria-hidden="true">›</span>
+        <span class="current">Contacto</span>
+      </nav>
+
+      <div class="row g-5 align-items-start">
+        <!-- Formulario -->
+        <div class="col-lg-7 fade-up">
+          <div class="section-header mb-4">
+            <span class="section-label">Comunícate</span>
+            <h1 style="font-size:2.2rem;">Envíanos un mensaje</h1>
+            <div class="deco-line mt-2"></div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <form id="contact-form" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="contact-name">Nombre</label>
+                  <input
+                    class="form-control-flora"
+                    type="text"
+                    id="contact-name"
+                    placeholder="Tu nombre"
+                    required
+                    autocomplete="name" />
+                </div>
+                <div class="col-sm-6">
+                  <label for="contact-email">Correo electrónico</label>
+                  <input
+                    class="form-control-flora"
+                    type="email"
+                    id="contact-email"
+                    placeholder="tu@correo.com"
+                    required
+                    autocomplete="email" />
+                </div>
+                <div class="col-12">
+                  <label for="contact-subject">Asunto</label>
+                  <select class="form-control-flora" id="contact-subject">
+                    <option value="">Selecciona un tema...</option>
+                    <option>Cuidado de plantas</option>
+                    <option>Pedidos y envíos</option>
+                    <option>Devoluciones</option>
+                    <option>Consulta general</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="contact-msg">Mensaje</label>
+                  <textarea
+                    class="form-control-flora"
+                    id="contact-msg"
+                    rows="5"
+                    placeholder="Escribe tu mensaje interestelar aquí..."
+                    required
+                    style="resize:vertical;"></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn-flora btn-flora-solid" id="submit-btn">
+                    Enviar mensaje ✦
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Mensaje de éxito -->
+            <div id="form-success" style="display:none;" class="mt-4 text-center" role="alert">
+              <span style="font-size:3rem;">🌸</span>
+              <h3 class="mt-2">¡Mensaje recibido!</h3>
+              <p style="color:var(--text-muted);">Te responderemos en menos de 24 horas estelares.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info de contacto -->
+        <div class="col-lg-5">
+          <div class="fade-up delay-2">
+            <div class="section-header mb-4">
+              <span class="section-label">Encuéntranos</span>
+              <h2 style="font-size:1.8rem;">Información de contacto</h2>
+              <div class="deco-line mt-2"></div>
+            </div>
+
+            <div class="d-flex flex-column gap-3">
+              <div class="cart-item" style="border-radius:4px;">
+                <div style="font-size:1.6rem;">📡</div>
+                <div>
+                  <div style="font-size:.75rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);">Ubicación</div>
+                  <div style="font-size:.9rem;margin-top:2px;">Estación Orbital Lagrange L4<br><span style="color:var(--text-muted);">Sistema Solar Interior, Vía Láctea</span></div>
+                </div>
+              </div>
+
+              <div class="cart-item" style="border-radius:4px;">
+                <div style="font-size:1.6rem;">📬</div>
+                <div>
+                  <div style="font-size:.75rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);">Correo</div>
+                  <div style="font-size:.9rem;margin-top:2px;color:var(--accent);">flora@cosmica.gal</div>
+                </div>
+              </div>
+
+              <div class="cart-item" style="border-radius:4px;">
+                <div style="font-size:1.6rem;">☎</div>
+                <div>
+                  <div style="font-size:.75rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);">Teléfono</div>
+                  <div style="font-size:.9rem;margin-top:2px;">+56 9 8765 4321</div>
+                </div>
+              </div>
+
+              <div class="cart-item" style="border-radius:4px;">
+                <div style="font-size:1.6rem;">🕐</div>
+                <div>
+                  <div style="font-size:.75rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);">Horario</div>
+                  <div style="font-size:.9rem;margin-top:2px;">Lunes a Viernes: 09:00–18:00 UTC<br><span style="color:var(--text-muted);">Fines de semana: 10:00–15:00 UTC</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById('navbar-placeholder').innerHTML = buildNavbar('contacto');
+    document.getElementById('footer-placeholder').innerHTML = buildFooter('../');
+
+    // Lógica del formulario de contacto
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name  = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const msg   = document.getElementById('contact-msg').value.trim();
+
+      if (!name || !email || !msg) {
+        showToast('⚠️ Por favor completa todos los campos requeridos');
+        return;
+      }
+
+      // Simular envío
+      const btn = document.getElementById('submit-btn');
+      btn.textContent = 'Enviando...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        document.getElementById('contact-form').style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+        showToast('✦ Mensaje enviado con éxito');
+      }, 1200);
+    });
+  </script>
+</body>
+</html>
